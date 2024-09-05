@@ -1,24 +1,15 @@
+import static UI.UIMenu.*;
+
 public class Main {
+
     public static void main(String[] args) {
+        //mostrarMenu();
 
-        Maestro maestro = new Maestro("German");
-        maestro.nombre = "German";
-        maestro.mostrarNombre();
-
-        Calculator.Suma(14,16);
-        System.out.println(Calculator.Pi);
-        maestro.mostrarId();
-
-        Maestro maestro2 = new Maestro("Dc nava");
-
-        maestro2.mostrarNombre();
-
-        Maestro.id++;
-
-        maestro.mostrarId();
-
-
-
-
+        Maestro maestro = new Maestro("Pato");
+        Maestro maestro2 = new Maestro("Mag", "Base de datos");
+        Maestro maestro3 = new Maestro();
+        System.out.println(maestro.id + maestro.nombre);
+        System.out.println(maestro2.id + maestro2.nombre);
     }
+
 }
