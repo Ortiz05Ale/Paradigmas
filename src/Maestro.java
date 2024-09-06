@@ -1,64 +1,19 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Maestro {
+public class Maestro extends Usuario{
 
 
     // Atributos
-    public static int ID =1;
-
-    private String nombre;
-    private int id;
+    private int numeroPersonal;
     private String especialidad;
 
-
-    public Maestro(){
-        id = ID;
-        ID++;
-    }
-
-    public Maestro(String nombre){
-        this.nombre = nombre;
-        id = ID;
-        ID++;
-
-    }
-
-    public Maestro(String nombre, String especialidad){
-        this.nombre = nombre;
-        this.especialidad = especialidad;
-        id = ID;
-        ID++;
-    }
-
-
-
-    public void mostrarId(){
-        System.out.println("ID: " + id);
-    }
-
-    public void mostrarNombre(){
-        System.out.println("Nombre: " + nombre);
+    //Constructor
+    public Maestro(String nombre) {
+        super();
     }
 
     //Get and Set
-
-    public String getNombre(){
-        return nombre;
-    }
-
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-
-    public int getId(){
-        return id;
-    }
-
-    public void setId(int id){
-        this.id = id;
-    }
-
     public String getEspecialidad() {
         return especialidad;
     }
@@ -67,7 +22,24 @@ public class Maestro {
         this.especialidad = especialidad;
     }
 
+    public int getNumeroPersonal() {
+        return numeroPersonal;
+    }
+
+    public void setNumeroPersonal(int numeroPersonal) {
+        this.numeroPersonal = numeroPersonal;
+    }
+
+    //ArrayList
     ArrayList <TutoriasDisponibles> tutoriasDisponibles = new ArrayList<>();
+
+    public void addCursoDisponible(Date fecha, String hora){
+        tutoriasDisponibles.add(new TutoriasDisponibles(fecha, hora));
+    }
+
+    public ArrayList <TutoriasDisponibles> getCursosDisponibles(){
+        return tutoriasDisponibles;
+    }
 
 
     //Clase anidada
@@ -78,6 +50,30 @@ public class Maestro {
 
         TutoriasDisponibles(Date fecha, String hora){
             this.fecha = fecha;
+            this.hora = hora;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public Date getFecha() {
+            return fecha;
+        }
+
+        public void setFecha(Date fecha) {
+            this.fecha = fecha;
+        }
+
+        public String getHora() {
+            return hora;
+        }
+
+        public void setHora(String hora) {
             this.hora = hora;
         }
     }

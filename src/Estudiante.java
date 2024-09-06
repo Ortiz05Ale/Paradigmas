@@ -1,38 +1,19 @@
-public class Estudiante {
-    private String nombre;
-    private String correo;
+public class Estudiante extends Usuario {
+
     private String matricula;
-    private String telefono;
-    private
-    String semestre;
+    private String semestre;
 
     public Estudiante(String nombre, String correo) {
-        this.nombre = nombre;
-        this.correo = correo;
+        super();
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
+    //Getters and Setters
     public String getSemestre() {
         return semestre;
     }
 
     public void setSemestre(String semestre) {
         this.semestre = semestre;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
     }
 
     public String getMatricula() {
@@ -43,11 +24,4 @@ public class Estudiante {
         this.matricula = matricula;
     }
 
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
 }
