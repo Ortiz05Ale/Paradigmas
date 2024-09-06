@@ -4,12 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
         //mostrarMenu();
+        /*
+        Maestro maestro1 = new Maestro("Pato");
 
-        Maestro maestro = new Maestro("Pato");
-        Maestro maestro2 = new Maestro("Mag", "Base de datos");
-        Maestro maestro3 = new Maestro();
-        System.out.println(maestro.id + maestro.nombre);
-        System.out.println(maestro2.id + maestro2.nombre);
+        maestro1.mostrarNombre();
+        maestro1.setNombre("Morales");
+        maestro1.mostrarNombre();
+        maestro1.mostrarId();
+         */
+
+        Calculator.ClaseAnidada calc = new Calculator.ClaseAnidada();
+        calc.mostrarNumero();
+
     }
 
 }
