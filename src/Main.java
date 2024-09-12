@@ -4,26 +4,21 @@ public class Main {
 
     public static void main(String[] args) {
         //mostrarMenu();
-        //Cuando la clase
         /*
         ClaseExterna instancia = new ClaseExterna();
         ClaseExterna.claseInterna instanciaAnidada = instancia.new claseInterna();
         instanciaAnidada.saludar();
         */
 
-        Maestro maestro = new Maestro("Morales");
+        Maestro maestro = new Maestro("Morales", 5785, "morales@uv.mx");
+
 
         //Agregar tutorias
-        maestro.addCursoDisponible(new Date(), "12:00");
-        maestro.addCursoDisponible(new Date(), "14:00");
-        maestro.addCursoDisponible(new Date(), "16:00");
-        //Listar tutorías
-        System.out.println(maestro.getCursosDisponibles());
+        maestro.addTutoriasDisponibles(new Date(), "12:00");
+        maestro.addTutoriasDisponibles(new Date(), "14:00");
+        maestro.addTutoriasDisponibles(new Date(), "16:00");
+        System.out.println(maestro);
 
-        System.out.println("Cursos disponibles");
-        for(Maestro.TutoriasDisponibles td : maestro.getCursosDisponibles()) {
-            System.out.println(td.getFecha() + " " + td.getHora());
-        }
 
     }
 

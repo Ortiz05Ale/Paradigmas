@@ -3,8 +3,9 @@ public class Estudiante extends Usuario {
     private String matricula;
     private String semestre;
 
-    public Estudiante(String nombre, String correo) {
-        super();
+    public Estudiante(String nombre,String correo, String matricula) {
+        super(nombre, correo);
+        this.matricula = matricula;
     }
 
     //Getters and Setters
@@ -24,4 +25,8 @@ public class Estudiante extends Usuario {
         this.matricula = matricula;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "matricula: " + matricula;
+    }
 }

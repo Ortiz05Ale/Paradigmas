@@ -3,6 +3,12 @@ public class Usuario {
     private String correo;
     private String telefono;
 
+
+    //Constructor
+    public Usuario(String nombre, String correo){
+        this.nombre = nombre;
+        this.correo = correo;
+    }
     public String getNombre() {
         return nombre;
     }
@@ -27,4 +33,8 @@ public class Usuario {
         this.telefono = telefono;
     }
 
+    @Override
+    public String toString() {
+        return "nombre: " + nombre + '\n' + "correo: " + correo + '\n';
+    }
 }

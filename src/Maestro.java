@@ -9,8 +9,9 @@ public class Maestro extends Usuario{
     private String especialidad;
 
     //Constructor
-    public Maestro(String nombre) {
-        super();
+    public Maestro(String nombre, int numeroPersonal, String correo) {
+        super(nombre, correo);
+        this.numeroPersonal = numeroPersonal;
     }
 
     //Get and Set
@@ -33,13 +34,14 @@ public class Maestro extends Usuario{
     //ArrayList
     ArrayList <TutoriasDisponibles> tutoriasDisponibles = new ArrayList<>();
 
-    public void addCursoDisponible(Date fecha, String hora){
+    public void addTutoriasDisponibles(Date fecha, String hora){
         tutoriasDisponibles.add(new TutoriasDisponibles(fecha, hora));
     }
 
-    public ArrayList <TutoriasDisponibles> getCursosDisponibles(){
+    public ArrayList <TutoriasDisponibles> getTutoriasDisponibles(){
         return tutoriasDisponibles;
     }
+
 
 
     //Clase anidada
@@ -76,5 +78,17 @@ public class Maestro extends Usuario{
         public void setHora(String hora) {
             this.hora = hora;
         }
+
+        @Override
+        public String toString() {
+            return "fecha: " + fecha +
+                    "hora: " + hora + "\n";
+        }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "numero de personal: " + numeroPersonal + "\nLos cursos disponibles son\n" +
+                tutoriasDisponibles.toString();
     }
 }
