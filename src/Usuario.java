@@ -1,4 +1,4 @@
-public abstract class Usuario {
+public abstrct class Usuario {
     private String nombre;
     private String correo;
     private String telefono;
