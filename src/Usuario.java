@@ -1,4 +1,4 @@
-public class Usuario {
+public abstract class Usuario {
     private String nombre;
     private String correo;
     private String telefono;
@@ -36,5 +36,10 @@ public class Usuario {
     @Override
     public String toString() {
         return "nombre: " + nombre + '\n' + "correo: " + correo + '\n';
+    }
+
+    public abstract void saludar();
+    public void despedirse(){
+        System.out.println("Despedirse");
     }
 }

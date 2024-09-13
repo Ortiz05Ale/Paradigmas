@@ -91,4 +91,9 @@ public class Maestro extends Usuario{
         return super.toString() + "numero de personal: " + numeroPersonal + "\nLos cursos disponibles son\n" +
                 tutoriasDisponibles.toString();
     }
+
+    @Override
+    public void saludar() {
+        System.out.println("Hola maestro");
+    }
 }

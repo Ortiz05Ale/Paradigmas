@@ -18,6 +18,7 @@ public class Main {
         maestro.addTutoriasDisponibles(new Date(), "14:00");
         maestro.addTutoriasDisponibles(new Date(), "16:00");
         System.out.println(maestro);
+        maestro.saludar();
 
 
     }

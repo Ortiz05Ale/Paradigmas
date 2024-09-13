@@ -29,4 +29,9 @@ public class Estudiante extends Usuario {
     public String toString() {
         return super.toString() + "matricula: " + matricula;
     }
+
+    @Override
+    public void saludar() {
+        System.out.println("Hola estudiante");
+    }
 }
