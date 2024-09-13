@@ -1,3 +1,5 @@
+package Pilares;
+
 public class EjemploPilares {
 
 }
