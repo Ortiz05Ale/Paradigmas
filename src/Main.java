@@ -1,26 +1,21 @@
+import Model.*;
+import UI.*;
+
 import java.util.Date;
 
+import static UI.UIMenu.*;
 public class Main {
-
     public static void main(String[] args) {
-        //mostrarMenu();
-        /*
-        ClaseExterna instancia = new ClaseExterna();
-        ClaseExterna.claseInterna instanciaAnidada = instancia.new claseInterna();
-        instanciaAnidada.saludar();
-        */
+        maestros.add(new Maestro("Luis Morales", "luismorales04@uv.mx", 57522));
+        maestros.add(new Maestro("Javier Pino", "jpino@uv.mx", 11111));
+        maestros.add(new Maestro("Magdiel Mercado", "mamercado@uv.mx", 22222));
+        maestros.add(new Maestro("Patricia Martínez", "pmartinez@uv.mx", 33333));
 
-        Maestro maestro = new Maestro("Morales", 5785, "morales@uv.mx");
+        estudiantes.add(new Estudiante("Ricardo Landa", "landa.uv.mx", "zs220170"));
+        estudiantes.add(new Estudiante("Alexis Lava Ollas", "nava.uv.mx", "zs220170"));
+        estudiantes.add(new Estudiante("Roberto Zuñigaberto", "figmaberto.uv.mx", "zs220170"));
 
-
-        //Agregar tutorias
-        maestro.addTutoriasDisponibles(new Date(), "12:00");
-        maestro.addTutoriasDisponibles(new Date(), "14:00");
-        maestro.addTutoriasDisponibles(new Date(), "16:00");
-        System.out.println(maestro);
-        maestro.saludar();
-
-
+        mostrarMenu();
     }
 
 }

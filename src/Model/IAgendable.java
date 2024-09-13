@@ -1,4 +1,5 @@
-import javax.xml.crypto.Data;
+package Model;
+
 import java.util.Date;
 
 public interface IAgendable {

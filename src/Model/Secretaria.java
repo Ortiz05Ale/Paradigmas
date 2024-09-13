@@ -1,3 +1,5 @@
+package Model;
+
 public class Secretaria extends Usuario{
     private String area;
     private String turno;
