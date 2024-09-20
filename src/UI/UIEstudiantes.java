@@ -1,5 +1,9 @@
 package UI;
 
+import Model.CitaMaestro;
+import Model.Maestro;
+import UI.UIMenu.*;
+
 import java.util.Scanner;
 
 public class UIEstudiantes {
@@ -18,13 +22,10 @@ public class UIEstudiantes {
 
             switch (respuesta){
                 case 1:
-                    System.out.println("..:: Agendar tutorías ::..");
-                    for (int i=0; i< 5; i++){
-                        System.out.println(i + ": "+ MESES[i]);
-                    }
+                    agendarTutoria();
                     break;
                 case 2:
-                    System.out.println("..:: Mis tutorias");
+                    listarTutorias();
                     break;
                 case 0:
                     System.out.println("..:: Bye ::..");
@@ -34,5 +35,20 @@ public class UIEstudiantes {
                     break;
             }
         }while (respuesta !=0);
+    }
+
+    private static void agendarTutoria(){
+        /*
+        1.- Maestro 1
+        1.- Tutoria 1
+        2.- Maestro 2
+        1.- Tutoria 2
+        Solo maestros que tengan tutorias disponibles
+         */
+        System.out.println("..:: Agendar Tutoria ::..");
+        for(int i = 0; i <= UIMenu.maestroLogeado)
+    }
+    private static void listarTutorias(){
+        System.out.println("..:: Agendar Tutoria ::..");
     }
 }

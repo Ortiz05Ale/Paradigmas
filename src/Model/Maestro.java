@@ -31,7 +31,7 @@ public class Maestro extends Usuario {
     }
 
     ArrayList<TutoriasDisponibles> tutoriasDisponibles = new ArrayList<>();
-    public void addTutoriaDisponible(Date fecha, String hora) {
+    public void addTutoriaDisponible(String fecha, String hora) {
         tutoriasDisponibles.add(new TutoriasDisponibles(fecha, hora));
 
     }
@@ -41,7 +41,7 @@ public class Maestro extends Usuario {
     }
 
     public static class TutoriasDisponibles extends CitaTutoria{
-        TutoriasDisponibles(Date fecha, String hora) {
+        TutoriasDisponibles(String fecha, String hora) {
             super(fecha, hora);
         }
     }

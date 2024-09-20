@@ -60,11 +60,9 @@ public class UIMenu {
             System.out.println("Ingresa tu correo: ");
             Scanner sc = new Scanner(System.in);
             String correoUsuario = sc.nextLine();
-
             if (tipoUsuario == 1) {
                 for(Maestro maestro : maestros) {
                     if (maestro.getCorreo().equals(correoUsuario)) {
-                        System.out.println("Hola " + maestro.getNombre() + "!");
                         banderaCorreo = false;
                         maestroLogeado = maestro;
                         maestroMenu();
