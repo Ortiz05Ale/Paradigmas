@@ -1,9 +1,14 @@
 package Model;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Estudiante extends Usuario {
 
     private String matricula;
     private String semestre;
+
+    ArrayList<CitaMaestro> tutoriasAgendadas = new ArrayList<>();
 
     public Estudiante(String nombre,String correo, String matricula) {
         super(nombre, correo);
@@ -25,6 +30,11 @@ public class Estudiante extends Usuario {
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+
+    public void addTutoriaMaestro(Maestro maestro, Date fecha, String hora) {
+        tutoriasAgendadas.add(new CitaMaestro(maestro, this));
+
     }
 
     @Override

@@ -35,7 +35,7 @@ public class CitaTutoria {
         this.hora = hora;
     }
 
-    public Date getFecha(Date fecha) {
+    public Date getFechaDate() {
         return fecha;
     }
     public String getFecha() {
