@@ -1,9 +1,11 @@
 package UI;
 
 import Model.CitaMaestro;
+import Model.CitaTutoria;
 import Model.Maestro;
 import UI.UIMenu.*;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UIEstudiantes {
@@ -66,7 +68,7 @@ public class UIEstudiantes {
 
             do {
                 System.out.println("Maestro: " + maestroSeleccionado.getNombre() + ", Tutoría:" +
-                        maestroSeleccionado.getTutoriasDisponibles().get(tutoriaSeleccionado - 1));
+                        maestroSeleccionado.getTutoriasDisponibles().get(tutoriaSeleccionado - 1).getFecha());
                 System.out.println("1.- Continuar \n2.- Cambiar tutoría");
                  respuestaConfirmacion = input.nextInt();
             }while (tutoriaSeleccionado < 1 || respuestaConfirmacion > 2);
@@ -84,5 +86,17 @@ public class UIEstudiantes {
     private static void listarTutorias(){
         System.out.println("..:: Listar Tutoria ::..");
 
+        ArrayList<CitaMaestro> misTutorias = UIMenu.estudianteLogeado.getTutoriasAgendadas();
+
+        if (misTutorias.isEmpty()){
+            System.out.println("No hay tutorias disponibles");
+        }
+
+        int i=1;
+        for(CitaMaestro cita : misTutorias){
+            System.out.println(i + ".- " + cita);
+            i++;
+        }
+        System.out.println();
     }
 }

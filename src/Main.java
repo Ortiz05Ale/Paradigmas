@@ -29,8 +29,8 @@ public class Main {
         estudiantes.add(new Estudiante("Ricardo Landa", "landa.uv.mx", "zs220170"));
         estudiantes.add(new Estudiante("Alexis Lava Ollas", "nava.uv.mx", "zs220170"));
         estudiantes.add(new Estudiante("Roberto Zuñigaberto", "figmaberto.uv.mx", "zs220170"));
-        // mostrarMenu();
-        UIEstudiantes.agendarTutoria();
+        mostrarMenu();
+        //UIEstudiantes.agendarTutoria();
     }
 
 }
